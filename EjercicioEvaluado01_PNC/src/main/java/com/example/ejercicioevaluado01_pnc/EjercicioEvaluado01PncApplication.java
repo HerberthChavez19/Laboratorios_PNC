@@ -18,7 +18,17 @@ public class EjercicioEvaluado01PncApplication {
 
         return args -> {
 
-            System.out.println("=== [S.T.A.R.S-REPORT] FILTRO POR VIRUS (T-Virus) ===");
+            System.out.println("[S.T.A.R.S - ALL B.O.W REVIEW]");
+            especimenService.consoleOutput()
+                    .forEach(e ->
+                            System.out.println("[S.T.A.R.S-REPORT] Nombre: " + e.getNombre()
+                                    + " | Nivel de Peligro: " + e.getNivelPeligrosidad()
+                                    + " | Punto Débil: " + e.getPuntoDebil())
+                    );
+
+
+            /*En caso que se queiera realizar la verificacion de la logica de negocio.*/
+            /*System.out.println("=== [S.T.A.R.S-REPORT] FILTRO POR VIRUS (T-Virus) ===");
             especimenService.findByVirusBase("T-Virus")
                     .forEach(e ->
                             System.out.println("[S.T.A.R.S-REPORT] Nombre: " + e.getNombre()
@@ -39,6 +49,8 @@ public class EjercicioEvaluado01PncApplication {
                     .forEach(v ->
                             System.out.println("[S.T.A.R.S-REPORT] Virus activo: " + v)
                     );
+
+             */
         };
     }
 

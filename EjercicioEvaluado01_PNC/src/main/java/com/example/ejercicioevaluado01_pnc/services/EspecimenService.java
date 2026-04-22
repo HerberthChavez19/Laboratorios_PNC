@@ -13,7 +13,7 @@ public class EspecimenService {
 
     private final EspecimenRepository especimenRepository;
 
-    public List<Especimen> findAll() {
+    public List<Especimen> consoleOutput() {
         return especimenRepository.findAll();
     }
 
