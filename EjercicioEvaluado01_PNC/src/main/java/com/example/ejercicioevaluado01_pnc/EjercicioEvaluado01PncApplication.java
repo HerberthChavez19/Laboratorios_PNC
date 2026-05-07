@@ -27,7 +27,7 @@ public class EjercicioEvaluado01PncApplication {
                     );
 
 
-            /*En caso que se queiera realizar la verificacion de la logica de negocio.*/
+            /*En caso que se queiera realizar la verificacion de la logica de negocio.`*/
             /*System.out.println("=== [S.T.A.R.S-REPORT] FILTRO POR VIRUS (T-Virus) ===");
             especimenService.findByVirusBase("T-Virus")
                     .forEach(e ->
