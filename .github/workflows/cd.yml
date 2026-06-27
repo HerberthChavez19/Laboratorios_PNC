@@ -15,7 +15,7 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: herberthchavez19
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push image
@@ -24,5 +24,5 @@ jobs:
           context: ./EjercicioEvaluado03_PNC
           push: true
           tags: |
-            herberthchavez19/ejercicio03-pnc:latest
-            herberthchavez19/ejercicio03-pnc:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/ejercicio03-pnc:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/ejercicio03-pnc:${{ github.sha }}
